@@ -1,7 +1,7 @@
 library(shiny)
 
 generate_story <- function(noun, verb, adjective, adverb) {
-  cat("We are generating a story", file = stderr())
+  cat("We are generating a story\n", file = stderr())
   story <- glue::glue(
     "
     Once upon a time, there was a {adjective} {noun} who loved to
