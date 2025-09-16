@@ -2,12 +2,15 @@ library(shiny)
 
 generate_story <- function(noun, verb, adjective, adverb) {
   cat("We are generating a story", file = stderr())
-  glue::glue(
+  story <- glue::glue(
     "
     Once upon a time, there was a {adjective} {noun} who loved to
     {verb} {adverb}. It was the funniest thing ever!
-  "
-  )
+    "
+    )
+  cat(story, file = stderr())
+
+  return(story)
 }
 
 ui <- fluidPage(
